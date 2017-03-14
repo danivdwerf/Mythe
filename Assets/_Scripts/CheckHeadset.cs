@@ -11,6 +11,7 @@ public class CheckHeadset : MonoBehaviour
 		{
 			try
 			{
+				print(pro.ProcessName.ToLower());
 				if(pro.ProcessName.ToLower().Contains("steamvr"))
 				{
 					print("Go for the vive");
