@@ -6,31 +6,38 @@ public class CheckController : MonoBehaviour
 {
 	private void Awake()
 	{
-		var joysticks = Input.GetJoystickNames();
-		for (int i = 0; i < joysticks.Length; i++)
-		{
-			if (joysticks [i].ToLower ().Contains ("sony"))
-				setPlaystation ();
+		var joysticks = Input.GetJoystickNames()[0].ToLower();
+		var os = System.Environment.OSVersion.Platform.ToString().ToLower();
 
-			if (joysticks [i].ToLower ().Contains ("xbox"))
-				setXbox ();
+		if (os == "unix")
+		{
+			if (joysticks.Contains ("sony"))
+			{
+				Controller.setController (ControllerType.playstation, Os.mac);
+				return;
+			}
+
+			if (joysticks.Contains ("xbox"))
+			{
+				Controller.setController (ControllerType.xbox, Os.mac);
+				return;
+			}
+		}
+
+		if (os == "windows")
+		{
+			if (joysticks.Contains ("sony"))
+			{
+				Controller.setController (ControllerType.playstation, Os.windows);
+				return;
+			}
+
+			if (joysticks.Contains ("xbox"))
+			{
+				Controller.setController (ControllerType.xbox, Os.windows);
+				return;
+			}
 		}
 	}
-
-	private void Update()
-	{
-		//if(Input.GetAxis("dpadUp"))
-		print(Input.GetAxis("dpadUp"));
-		//print (Input.GetAxis(Controller.leftStickX));
-	}
-
-	private void setPlaystation()
-	{
-		
-	}
-
-	private void setXbox()
-	{
-		
-	}
 }
+
