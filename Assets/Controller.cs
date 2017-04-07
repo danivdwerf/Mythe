@@ -38,6 +38,7 @@ public class Controller
 
 	public static void setController(ControllerType controller, Os os)
 	{
+		Debug.Log (controller.ToString() + " : " + os.ToString());
 		if (triangle != "")
 		{
 			return;
