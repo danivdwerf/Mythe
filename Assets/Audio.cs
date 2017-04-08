@@ -25,7 +25,8 @@ public class Audio
 
 	public void play()
 	{
-		this.source.Play ();
+		if(!this.source.isPlaying)
+			this.source.Play ();
 	}
 
 	public void stop()
