@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 112b6fe3707accc4b8c0df9fbdeee98e
+timeCreated: 1491825790
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arms_left:Arm
+    100004: Arms_left:arm_xbox
+    100006: Arms_left:arm_xbox2
+    100008: Arms_left:arm_xbox2 1
+    100010: Arms_left:arm_xbox2 2
+    100012: Arms_left:arm_xbox4
+    100014: Arms_left:Index_End
+    100016: Arms_left:Index_End1
+    100018: Arms_left:joint10
+    100020: Arms_left:joint11
+    100022: Arms_left:joint12
+    100024: Arms_left:joint13
+    100026: Arms_left:joint14
+    100028: Arms_left:joint15
+    100030: Arms_left:joint16
+    100032: Arms_left:joint17
+    100034: Arms_left:joint18
+    100036: Arms_left:joint19
+    100038: Arms_left:joint20
+    100040: Arms_left:joint21
+    100042: Arms_left:joint22
+    100044: Arms_left:joint23
+    100046: Arms_left:joint24
+    100048: Arms_left:joint7
+    100050: Arms_left:joint8
+    100052: Arms_left:joint9
+    100054: Arms_left:L_shouder2
+    100056: Arms_left:Middel_End
+    100058: Arms_left:Middel_End1
+    100060: Arms_left:Pink_End
+    100062: Arms_left:Pink_End1
+    100064: Arms_left:R_Duim01
+    100066: Arms_left:R_Duim03
+    100068: Arms_left:R_Duim04
+    100070: Arms_left:R_Duim05
+    100072: Arms_left:R_elbow
+    100074: Arms_left:R_elbow1
+    100076: Arms_left:R_Index01
+    100078: Arms_left:R_Index02
+    100080: Arms_left:R_Middel01
+    100082: Arms_left:R_Middel02
+    100084: Arms_left:R_Pink01
+    100086: Arms_left:R_Pink02
+    100088: Arms_left:R_pols
+    100090: Arms_left:R_pols1
+    100092: Arms_left:R_Ring01
+    100094: Arms_left:R_Ring02
+    100096: Arms_left:R_shouder1
+    100098: Arms_left:Ring_End
+    100100: Arms_left:Ring_End1
+    100102: Arms_left:transform1
+    100104: Arms_left:transform2
+    100106: Arms_left:transform3
+    400000: //RootNode
+    400002: Arms_left:Arm
+    400004: Arms_left:arm_xbox
+    400006: Arms_left:arm_xbox2
+    400008: Arms_left:arm_xbox2 1
+    400010: Arms_left:arm_xbox2 2
+    400012: Arms_left:arm_xbox4
+    400014: Arms_left:Index_End
+    400016: Arms_left:Index_End1
+    400018: Arms_left:joint10
+    400020: Arms_left:joint11
+    400022: Arms_left:joint12
+    400024: Arms_left:joint13
+    400026: Arms_left:joint14
+    400028: Arms_left:joint15
+    400030: Arms_left:joint16
+    400032: Arms_left:joint17
+    400034: Arms_left:joint18
+    400036: Arms_left:joint19
+    400038: Arms_left:joint20
+    400040: Arms_left:joint21
+    400042: Arms_left:joint22
+    400044: Arms_left:joint23
+    400046: Arms_left:joint24
+    400048: Arms_left:joint7
+    400050: Arms_left:joint8
+    400052: Arms_left:joint9
+    400054: Arms_left:L_shouder2
+    400056: Arms_left:Middel_End
+    400058: Arms_left:Middel_End1
+    400060: Arms_left:Pink_End
+    400062: Arms_left:Pink_End1
+    400064: Arms_left:R_Duim01
+    400066: Arms_left:R_Duim03
+    400068: Arms_left:R_Duim04
+    400070: Arms_left:R_Duim05
+    400072: Arms_left:R_elbow
+    400074: Arms_left:R_elbow1
+    400076: Arms_left:R_Index01
+    400078: Arms_left:R_Index02
+    400080: Arms_left:R_Middel01
+    400082: Arms_left:R_Middel02
+    400084: Arms_left:R_Pink01
+    400086: Arms_left:R_Pink02
+    400088: Arms_left:R_pols
+    400090: Arms_left:R_pols1
+    400092: Arms_left:R_Ring01
+    400094: Arms_left:R_Ring02
+    400096: Arms_left:R_shouder1
+    400098: Arms_left:Ring_End
+    400100: Arms_left:Ring_End1
+    400102: Arms_left:transform1
+    400104: Arms_left:transform2
+    400106: Arms_left:transform3
+    4300000: Arms_left:arm_xbox4
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Arms_left:arm_xbox4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
