@@ -8,7 +8,7 @@ public class CheckController : MonoBehaviour
 	{
 		var joysticks = Input.GetJoystickNames()[0].ToLower();
 		var os = System.Environment.OSVersion.Platform.ToString().ToLower();
-
+        
 		if (os == "unix")
 		{
 			if (joysticks.Contains ("sony"))
@@ -24,7 +24,7 @@ public class CheckController : MonoBehaviour
 			}
 		}
 
-		if (os == "windows")
+		if (os == "win32nt")
 		{
 			if (joysticks.Contains ("sony"))
 			{
