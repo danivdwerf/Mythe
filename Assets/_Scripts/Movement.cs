@@ -26,9 +26,11 @@ public class Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Vector3 velocity = movement.normalized * speed * Time.fixedDeltaTime;
+		// transform.forward.z * movement.z
+		// transform.left.x * movement.x;
+		Vector3 velocity = transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
+		rigid.MovePosition(rigid.position + velocity);
 		if (velocity.sqrMagnitude >= 0.01)
 			audio.playSound ("step");
-		rigid.MovePosition(rigid.position + velocity);
 	}
 }
