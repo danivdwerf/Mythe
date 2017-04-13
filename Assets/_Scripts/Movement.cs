@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
 		var mag = velocity.sqrMagnitude;
 		leftArm.SetFloat ("velocity", mag);
 		rightArm.SetFloat ("velocity", mag);
+		print (mag);
 		if (mag >= 0.01)
 			audio.playSound ("step");
 	}
