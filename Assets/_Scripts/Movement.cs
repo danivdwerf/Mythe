@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
 	[Range(5,20)]
 	[SerializeField]private float speed;
+	[SerializeField]private Animator leftArm;
+	[SerializeField]private Animator rightArm;
 	private Rigidbody rigid;
 	private Vector3 movement;
 	private AudioManager audio;
@@ -26,11 +28,12 @@ public class Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		// transform.forward.z * movement.z
-		// transform.left.x * movement.x;
 		Vector3 velocity = transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
 		rigid.MovePosition(rigid.position + velocity);
-		if (velocity.sqrMagnitude >= 0.01)
+		var mag = velocity.sqrMagnitude;
+		leftArm.SetFloat ("velocity", mag);
+		rightArm.SetFloat ("velocity", mag);
+		if (mag >= 0.01)
 			audio.playSound ("step");
 	}
 }
