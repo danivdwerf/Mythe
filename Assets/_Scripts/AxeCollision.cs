@@ -9,12 +9,12 @@ public class AxeCollision : MonoBehaviour
 	}
 	private void OnCollisionEnter(Collision other)
 	{
-		print (other.collider.name);
 		var index = 0;
-		if (ps [index].isPlaying)
-		{
+		if (ps [0].isPlaying)
 			index = 1;
-		}
+
+		if (ps [1].isPlaying)
+			index = 0;
 
 		ps[index].transform.position = this.transform.position;
 		ps[index].transform.LookAt (Camera.main.transform);
