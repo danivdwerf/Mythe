@@ -4,6 +4,7 @@ public class PickupAxe : MonoBehaviour
 {
 	private Transform axe;
 	[SerializeField]private Transform axePos;
+	[SerializeField]private ParticleSystem ps;
 
 	private void Start()
 	{
@@ -17,5 +18,6 @@ public class PickupAxe : MonoBehaviour
 		axe.SetParent (axePos);
 		axe.localPosition = axePos.localPosition;
 		axe.localEulerAngles = new Vector3 (0,0,0);
+		ps.Play ();
 	}
 }
