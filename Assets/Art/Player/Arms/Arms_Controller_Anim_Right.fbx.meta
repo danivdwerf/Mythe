@@ -57,6 +57,7 @@ ModelImporter:
     400048: Arms_Reference:Ring_End2
     4300000: Arms_Reference:R_Arm_Mesh
     7400000: Walking_right
+    7400002: throw_axe
     9500000: //RootNode
     13700000: Arms_Reference:R_Arm_Mesh
   materials:
@@ -94,6 +95,84 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arms_Reference:locator20
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Duim06
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Duim06/Arms_Reference:joint25
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Duim06/Arms_Reference:joint25/Arms_Reference:R_Duim07
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Index03
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Index03/Arms_Reference:joint26
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Index03/Arms_Reference:joint26/Arms_Reference:joint27
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Index03/Arms_Reference:joint26/Arms_Reference:joint27/Arms_Reference:Index_End2
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Middel03
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Middel03/Arms_Reference:joint28
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Middel03/Arms_Reference:joint28/Arms_Reference:joint29
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Middel03/Arms_Reference:joint28/Arms_Reference:joint29/Arms_Reference:Middel_End2
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Pink03
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Pink03/Arms_Reference:joint32
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Pink03/Arms_Reference:joint32/Arms_Reference:joint33
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Pink03/Arms_Reference:joint32/Arms_Reference:joint33/Arms_Reference:Pink_End2
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Ring03
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Ring03/Arms_Reference:joint30
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Ring03/Arms_Reference:joint30/Arms_Reference:joint31
+        weight: 1
+      - path: Arms_Reference:locator20/Arms_Reference:R_shouder3/Arms_Reference:R_elbow2/Arms_Reference:R_pols2/Arms_Reference:R_Ring03/Arms_Reference:joint30/Arms_Reference:joint31/Arms_Reference:Ring_End2
+        weight: 1
+      - path: Arms_Reference:R_Arm_Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: throw_axe
+      takeName: Take 001
+      firstFrame: 91
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

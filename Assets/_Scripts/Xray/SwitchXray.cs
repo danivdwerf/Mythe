@@ -17,9 +17,7 @@ public class SwitchXray : MonoBehaviour
 	private void Update () 
 	{
 		if (Input.GetButtonDown (Controller.L1))
-		{
 			switchVision ();
-		}
 	}
 
 	public void switchVision()
@@ -36,17 +34,21 @@ public class SwitchXray : MonoBehaviour
 
 	private void normVision()
 	{
-		mainCamera.cullingMask &=  ~(1 << LayerMask.NameToLayer("DisText"));
 		_specVision = false;
+		mainCamera.cullingMask &=  ~(1 << LayerMask.NameToLayer("DisText"));
+		for (var i = 0; i < objects.Length; i++) 
+		{
+			objects [i].normalMat ();
+		}
 	}
 
 	private void specVision()
 	{
+		_specVision = true;
 		mainCamera.cullingMask |= 1 << LayerMask.NameToLayer("DisText");
 		for (var i = 0; i < objects.Length; i++) 
 		{
-			objects [i].switchMat ();
+			objects [i].visionMat ();
 		}
-		_specVision = true;
 	}
 }

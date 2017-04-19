@@ -6,25 +6,22 @@ public class OutlineObject : MonoBehaviour
 	[Range(0, 0.1f)][SerializeField]private float lineWidth;
 	private Renderer renderer;
 	private SwitchMaterial materialSwitch;
-	private bool isOutlined;
 
-	void Start () 
+	void Awake () 
 	{
-		isOutlined = false;
 		renderer = GetComponent<Renderer> ();
 		materialSwitch = GameObject.FindGameObjectWithTag ("GameController").GetComponent<SwitchMaterial> ();
 	}
 
-	public void switchMat()
+	public void normalMat()
 	{
-		if(this.isOutlined)
-		{
-			materialSwitch.normalMaterial (this.renderer);
-			this.isOutlined = false;
-			return;
-		}
+		materialSwitch.normalMaterial (this.renderer);
+		return;
+	}
+
+	public void visionMat()
+	{
 		materialSwitch.outlineMaterial (this.renderer, this.lineWidth);
-		this.isOutlined = true;
 		return;
 	}
 }

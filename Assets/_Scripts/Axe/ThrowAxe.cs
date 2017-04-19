@@ -26,4 +26,12 @@ public class ThrowAxe : MonoBehaviour
 		rigid.isKinematic = false;
 		rigid.AddForce (axe.transform.forward * throwPower * Time.deltaTime, ForceMode.Impulse);
 	}
+
+	public void axeInHand()
+	{
+		inHand = true;
+		rigid.useGravity = false;
+		rigid.isKinematic = true;
+		rigid.velocity = Vector3.zero;
+	}
 }
