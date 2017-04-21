@@ -16,8 +16,8 @@ public class PickupAxe : MonoBehaviour
 	public void pickupAxe()
 	{
 		axe.SetParent (axePos);
-		axe.localPosition = axePos.localPosition;
-		axe.localEulerAngles = new Vector3 (0,0,0);
+		axe.localPosition = Vector3.zero;
+		axe.localEulerAngles = Vector3.zero;
 		ps.Play ();
 	}
 }

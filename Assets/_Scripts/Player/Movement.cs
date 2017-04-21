@@ -5,8 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour 
 {
-	[Range(5,20)]
-	[SerializeField]private float speed;
+	[Range(1, 5)][SerializeField]private float speed;
 	[SerializeField]private Animator leftArm;
 	[SerializeField]private Animator rightArm;
 	private Rigidbody rigid;
