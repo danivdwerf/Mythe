@@ -13,8 +13,8 @@ public abstract class Person : MonoBehaviour
 
 	protected virtual void Update()
 	{
-		if (Input.GetButtonDown (Controller.Triangle))
-			takeDamage (15);
+		//if (Input.GetButtonDown (Controller.Triangle))
+			//takeDamage (15);
 		
 		if (curHealth <= 0)
 			onDeath ();

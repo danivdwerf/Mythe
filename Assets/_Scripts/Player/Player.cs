@@ -12,6 +12,7 @@ public class Player : Person
 	}
 
 	protected override void takeDamage (float damage){curHealth -= damage;}
+
 	protected override void onDeath ()
 	{
 		print ("dead");

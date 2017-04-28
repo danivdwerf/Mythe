@@ -22,9 +22,13 @@ public class SpawnBone : MonoBehaviour
 
 	private void spawnBone()
 	{
+		if (bones.AmountBones < 1)
+			return;
+			
 		var newBone = bones.getLastBone ();
 		if (newBone == null)
 			return;
+		
 		newBone.transform.position = player.transform.position - new Vector3(0, spawnOffSetY, 0);
 		newBone.SetActive (true);
 		bones.drawLines ();
