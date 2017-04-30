@@ -6,14 +6,16 @@ using UnityEngine;
 public class Movement : MonoBehaviour 
 {
 	[Range(1, 5)][SerializeField]private float speed;
+	[SerializeField]private Animator leftArm;
+	[SerializeField]private Animator rightArm;
 	private Rigidbody rigid;
 	private Vector3 movement;
-	//private AudioManager audio;
+	private AudioManager audio;
 
 	private void Start()
 	{
 		rigid = GetComponent<Rigidbody> ();
-		//audio = FindObjectOfType<AudioManager> ();
+		audio = FindObjectOfType<AudioManager> ();
 	}
 
 	private void Update()
@@ -27,5 +29,11 @@ public class Movement : MonoBehaviour
 	{
 		Vector3 velocity = transform.TransformDirection(movement.normalized) *  speed * Time.fixedDeltaTime;
 		rigid.MovePosition(rigid.transform.localPosition + velocity);
+		var mag = velocity.z*10;
+		print (mag);
+		leftArm.SetFloat ("velocity", mag);
+		rightArm.SetFloat ("velocity", mag);
+		if (mag >= 0.1)
+			audio.playSound ("step");
 	}
 }

@@ -56,11 +56,13 @@ public class Bones : MonoBehaviour
 
 	private void Update()
 	{
+		/*
 		if (Input.GetButtonDown (Controller.Triangle))
 		{
 			bones [3].SetActive (false);
 			drawLines ();
 		}
+		*/
 	}
 
 	public void drawLines()

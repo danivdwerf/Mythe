@@ -11,8 +11,6 @@ public class Player : Person
 		lookScript = FindObjectOfType<LookScript> ();
 	}
 
-	protected override void takeDamage (float damage){curHealth -= damage;}
-
 	protected override void onDeath ()
 	{
 		print ("dead");

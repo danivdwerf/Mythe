@@ -3,23 +3,27 @@
 public abstract class Person : MonoBehaviour 
 {
 	[SerializeField]private float maxHealth;
-	protected float curHealth;
+	[SerializeField]protected float curHealth;
 	public float Health{get{return curHealth;}}
+	private bool dead;
+	public bool Dead{get{return dead;} set{dead = value;}}
 
 	protected virtual void Start()
 	{
 		curHealth = maxHealth;
+		dead = false;
 	}
 
 	protected virtual void Update()
 	{
-		//if (Input.GetButtonDown (Controller.Triangle))
-			//takeDamage (15);
-		
-		if (curHealth <= 0)
+		if (curHealth <= 0 && !dead)
+		{
 			onDeath ();
+			dead = true;
+		}
 	}
 
-	protected abstract void takeDamage(float damage);
+	public virtual void reset(){curHealth = maxHealth;;}
+	public virtual void takeDamage(float damage){curHealth -= damage;}
 	protected abstract void onDeath ();
 }

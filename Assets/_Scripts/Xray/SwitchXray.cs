@@ -23,13 +23,9 @@ public class SwitchXray : MonoBehaviour
 	public void switchVision()
 	{
 		if (_specVision)
-		{
 			normVision ();
-		} 
 		else
-		{
 			specVision ();
-		}
 	}
 
 	private void normVision()

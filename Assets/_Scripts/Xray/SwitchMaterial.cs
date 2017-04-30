@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwitchMaterial : MonoBehaviour {
-	[SerializeField] private Shader normalShader;
+public class SwitchMaterial : MonoBehaviour 
+{
+	//private Shader normalShader;
 	[SerializeField] private Shader outlineShader;
-
-
-
 	public void outlineMaterial(Renderer renderer, float lineWidth)
 	{
 		renderer.material.shader = outlineShader;
@@ -15,7 +13,7 @@ public class SwitchMaterial : MonoBehaviour {
 		renderer.material.SetColor ("_OutlineColor", Color.red);
 	}
 
-	public void normalMaterial(Renderer renderer)
+	public void normalMaterial(Renderer renderer, Shader normalShader)
 	{
 		renderer.material.shader = normalShader;
 	}
