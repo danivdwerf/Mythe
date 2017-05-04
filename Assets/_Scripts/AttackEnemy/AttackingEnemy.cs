@@ -4,6 +4,7 @@ using System.Collections;
 public class AttackingEnemy : MonoBehaviour 
 {
 	[SerializeField]private GameObject target;
+	[SerializeField]private float speedMultiplier;
 	private Animator anim;
 	private EnemyHealth health;
 	private bool attacking;
@@ -16,16 +17,16 @@ public class AttackingEnemy : MonoBehaviour
 
 	private void OnEnable()
 	{
-		this.transform.position = new Vector3 (260, 12, 74);
-		if (target == null)
-			anim.SetBool ("hasTarget", false);
-
+		//this.transform.position = new Vector3 (260, 12, 74);
 		anim.SetBool ("hasTarget", true);
 		anim.SetBool ("dead", false);
 		anim.SetBool ("attack", false);
 		anim.SetBool ("follow", false);
 		health.Dead = false;
 		attacking = false;
+
+		if (target == null)
+			anim.SetBool ("hasTarget", false);
 	}
 
 	private void Update()
@@ -46,7 +47,7 @@ public class AttackingEnemy : MonoBehaviour
 		lookPosition.y = 0;
 		var rotation = Quaternion.LookRotation (lookPosition);
 		this.transform.rotation = Quaternion.Slerp (this.transform.rotation, rotation, Time.deltaTime * 6);
-		this.transform.position -= dir.normalized / 5;
+		this.transform.position -= dir.normalized * speedMultiplier * Time.deltaTime;
 	}
 
 	private void attack()
@@ -63,7 +64,8 @@ public class AttackingEnemy : MonoBehaviour
 
 	private void OnDisable()
 	{
-		this.transform.position = new Vector3 (0, 0, 0);
+		this.transform.position = new Vector3 (95, 10, 56);
 		health.reset ();
+		//this.gameObject.SetActive (true);
 	}
 }

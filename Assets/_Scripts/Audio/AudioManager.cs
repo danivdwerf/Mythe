@@ -2,15 +2,15 @@
 
 public class AudioManager : MonoBehaviour 
 {
-	[SerializeField]private Audio[] audio;
+	[SerializeField]private Audio[] audioFiles;
 
 	private void Awake()
 	{
-		for (var i = 0; i < audio.Length; i++)
+		for (var i = 0; i < audioFiles.Length; i++)
 		{
-			GameObject go = new GameObject ("Audio: " + audio[i].Name.ToString());
+			GameObject go = new GameObject ("Audio: " + audioFiles[i].Name.ToString());
 			go.transform.SetParent (this.transform);
-			audio [i].setSource (go.AddComponent<AudioSource>());
+			audioFiles [i].setSource (go.AddComponent<AudioSource>());
 		}
 	}
 
@@ -26,11 +26,11 @@ public class AudioManager : MonoBehaviour
 
 	private Audio audioLoop(string name)
 	{
-		for (var i = 0; i < audio.Length; i++)
+		for (var i = 0; i < audioFiles.Length; i++)
 		{
-			if (audio [i].Name == name)
+			if (audioFiles [i].Name == name)
 			{
-				return audio[i];
+				return audioFiles[i];
 			}
 		}
 		throw new System.Exception ("AudioManager: Could not find: " + name);

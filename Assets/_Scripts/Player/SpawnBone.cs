@@ -5,13 +5,15 @@ using UnityEngine;
 public class SpawnBone : MonoBehaviour 
 {
 	[SerializeField]private float spawnOffSetY;
-	private Bones bones;
+	private DrawLineToBones bones;
+	private ObjectPooler bonePool;
 	private GameObject player;
 
 	private void Start()
 	{
 		player = this.gameObject;
-		bones = GameObject.FindGameObjectWithTag ("GameController").GetComponent<Bones>();
+		bones = GameObject.FindGameObjectWithTag ("GameController").GetComponent<DrawLineToBones>();
+		bonePool = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ObjectPooler>();
 	}
 
 	private void Update()
@@ -21,11 +23,8 @@ public class SpawnBone : MonoBehaviour
 	}
 
 	private void spawnBone()
-	{
-		if (bones.AmountBones < 1)
-			return;
-			
-		var newBone = bones.getLastBone ();
+	{			
+		var newBone = bonePool.getObject ();
 		if (newBone == null)
 			return;
 		

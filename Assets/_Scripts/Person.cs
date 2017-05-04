@@ -3,7 +3,7 @@
 public abstract class Person : MonoBehaviour 
 {
 	[SerializeField]private float maxHealth;
-	[SerializeField]protected float curHealth;
+	protected float curHealth;
 	public float Health{get{return curHealth;}}
 	private bool dead;
 	public bool Dead{get{return dead;} set{dead = value;}}
