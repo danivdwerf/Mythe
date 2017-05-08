@@ -13,7 +13,6 @@ public class Player : Person
 
 	protected override void onDeath ()
 	{
-		print ("dead");
 		//lookScript.enabled = false;
 		//movementScript.enabled = false;
 		//this.enabled = false;

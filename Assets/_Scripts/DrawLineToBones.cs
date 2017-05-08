@@ -39,7 +39,6 @@ public class DrawLineToBones : MonoBehaviour
 
 	public void drawLines()
 	{
-		//print (bonePool.PoolSize);
 		for (var i = 0; i < bonePool.PoolSize; i++)
 		{
 			if (i == 0)

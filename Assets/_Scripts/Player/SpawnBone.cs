@@ -8,6 +8,7 @@ public class SpawnBone : MonoBehaviour
 	private DrawLineToBones bones;
 	private ObjectPooler bonePool;
 	private GameObject player;
+	private int amountOfBones;
 
 	private void Start()
 	{
@@ -22,12 +23,21 @@ public class SpawnBone : MonoBehaviour
 			spawnBone ();
 	}
 
+	public void addBone()
+	{
+		amountOfBones++;
+	}
+
 	private void spawnBone()
-	{			
+	{
+		if (amountOfBones < 1)
+			return;
+		
 		var newBone = bonePool.getObject ();
 		if (newBone == null)
 			return;
 		
+		amountOfBones--;
 		newBone.transform.position = player.transform.position - new Vector3(0, spawnOffSetY, 0);
 		newBone.SetActive (true);
 		bones.drawLines ();

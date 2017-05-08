@@ -7,17 +7,18 @@ public class AttackingEnemy : MonoBehaviour
 	[SerializeField]private float speedMultiplier;
 	private Animator anim;
 	private EnemyHealth health;
+    private ObjectPooler pooler;
 	private bool attacking;
 
 	private void Awake()
 	{
 		anim = this.GetComponent<Animator> ();
 		health = this.GetComponent<EnemyHealth> ();
+        pooler = GameObject.FindGameObjectWithTag("GameController").GetComponent<ObjectPooler>();
 	}
 
 	private void OnEnable()
-	{
-		//this.transform.position = new Vector3 (260, 12, 74);
+    {
 		anim.SetBool ("hasTarget", true);
 		anim.SetBool ("dead", false);
 		anim.SetBool ("attack", false);
@@ -31,7 +32,6 @@ public class AttackingEnemy : MonoBehaviour
 
 	private void Update()
 	{
-		//this.transform.LookAt (target.transform);
 		var dir = (this.transform.position - target.transform.position);
 		if (Mathf.Abs(dir.sqrMagnitude) <= 15f)
 			attack ();
@@ -64,8 +64,11 @@ public class AttackingEnemy : MonoBehaviour
 
 	private void OnDisable()
 	{
+        var bone = pooler.getObject();
+        bone.transform.position = this.transform.position;
+        bone.SetActive(true);
+
 		this.transform.position = new Vector3 (95, 10, 56);
 		health.reset ();
-		//this.gameObject.SetActive (true);
 	}
 }

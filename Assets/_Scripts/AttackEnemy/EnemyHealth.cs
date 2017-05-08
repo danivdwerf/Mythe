@@ -21,5 +21,6 @@ public class EnemyHealth : Person
 		anim.SetBool ("dead", true);
 		yield return new WaitForSeconds (death.length+4);
 		this.gameObject.SetActive (false);
+        this.gameObject.SetActive (true);
 	}
 }

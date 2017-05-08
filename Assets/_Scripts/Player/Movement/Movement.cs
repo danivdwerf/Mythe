@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
 	{
 		Vector3 velocity = transform.TransformDirection(movement.normalized) *  speed * Time.fixedDeltaTime;
 		rigid.MovePosition(rigid.transform.localPosition + velocity);
-		var mag = velocity.z*10;
+        var mag = Mathf.Abs(velocity.z*10);
 		leftArm.SetFloat ("velocity", mag);
 		rightArm.SetFloat ("velocity", mag);
 		if (mag >= 0.1)
