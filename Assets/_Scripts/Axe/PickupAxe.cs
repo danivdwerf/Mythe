@@ -1,11 +1,25 @@
 ﻿using UnityEngine;
-
+/// <summary>
+/// Pickup axe.
+/// </summary>
 public class PickupAxe : MonoBehaviour 
 {
+    /// <summary>
+    /// The axe.
+    /// </summary>
 	private Transform axe;
+    /// <summary>
+    /// The axe position.
+    /// </summary>
 	[SerializeField]private Transform axePos;
+    /// <summary>
+    /// The particlesystem.
+    /// </summary>
 	[SerializeField]private ParticleSystem ps;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		axe = GameObject.FindGameObjectWithTag ("Axe").transform;
@@ -13,6 +27,9 @@ public class PickupAxe : MonoBehaviour
 			throw new System.Exception ("PickupAxe: Failed to find the axe");
 	}
 
+    /// <summary>
+    /// Picks up the axe.
+    /// </summary>
 	public void pickupAxe()
 	{
 		axe.SetParent (axePos);

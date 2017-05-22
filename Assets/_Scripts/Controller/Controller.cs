@@ -1,41 +1,97 @@
 ﻿using UnityEngine;
 public enum ControllerType{xbox, playstation};
 public enum Os{windows, mac};
+/// <summary>
+/// Controller.
+/// </summary>
 public class Controller
 {
+    /// <summary>
+    /// The triangle.
+    /// </summary>
 	private static string triangle = "";
 	public static string Triangle{get{return triangle;}}
+    /// <summary>
+    /// The square.
+    /// </summary>
 	private static string square = "";
 	public static string Square{get{return square;}}
+    /// <summary>
+    /// The cross.
+    /// </summary>
 	private static string cross = "";
 	public static string Cross{get{return cross;}}
+    /// <summary>
+    /// The circle.
+    /// </summary>
 	private static string circle = "";
 	public static string Circle{get{return circle;}}
+    /// <summary>
+    /// The left stick x.
+    /// </summary>
 	private static string leftStickX = "";
 	public static string LeftStickX{get{return leftStickX;}}
+    /// <summary>
+    /// The left stick y.
+    /// </summary>
 	private static string leftStickY = "";
 	public static string LeftStickY{get{return leftStickY;}}
+    /// <summary>
+    /// The right stick x.
+    /// </summary>
 	private static string rightStickX = "";
 	public static string RightStickX{get{return rightStickX;}}
+    /// <summary>
+    /// The right stick y.
+    /// </summary>
 	private static string rightStickY = "";
 	public static string RightStickY{get{return rightStickY;}}
+    /// <summary>
+    /// The l1.
+    /// </summary>
 	private static string l1 = "";
 	public static string L1{get{return l1;}}
+    /// <summary>
+    /// The r1.
+    /// </summary>
 	private static string r1 = "";
 	public static string R1{get{return r1;}}
+    /// <summary>
+    /// The l2.
+    /// </summary>
 	private static string l2 = "";
 	public static string L2{get{return l2;}}
+    /// <summary>
+    /// The r2.
+    /// </summary>
 	private static string r2 = "";
 	public static string R2{get{return r2;}}
+    /// <summary>
+    /// The left thumb.
+    /// </summary>
 	private static string leftThumb = "";
 	public static string LeftThumb{get{return leftThumb;}}
+    /// <summary>
+    /// The right thumb.
+    /// </summary>
 	private static string rightThumb = "";
 	public static string RightThumb{get{return rightThumb;}}
+    /// <summary>
+    /// The dpad x.
+    /// </summary>
 	private static string dpadX = "";
 	public static string DpadX{get{return dpadX;}}
+    /// <summary>
+    /// The dpad y.
+    /// </summary>
 	private static string dpadY = "";
 	public static string DpadY{get{return dpadY;}}
 
+    /// <summary>
+    /// Sets the controller.
+    /// </summary>
+    /// <param name="controller">Controller.</param>
+    /// <param name="os">Os.</param>
 	public static void setController(ControllerType controller, Os os)
 	{
 		if (triangle != "")
@@ -102,6 +158,9 @@ public class Controller
 		}
 	}
 
+    /// <summary>
+    /// Sets the playstation values.
+    /// </summary>
 	private static void setPlaystation()
 	{
 		triangle = "psTriangle";

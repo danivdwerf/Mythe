@@ -1,12 +1,29 @@
 ﻿using UnityEngine;
-
+/// <summary>
+/// Throw axe.
+/// </summary>
 public class ThrowAxe : MonoBehaviour 
 {
+    /// <summary>
+    /// The throw power.
+    /// </summary>
 	[SerializeField]private float throwPower;
+    /// <summary>
+    /// The axe.
+    /// </summary>
 	[SerializeField]private GameObject axe;
+    /// <summary>
+    /// Reference to the Rigidbody.
+    /// </summary>
 	private Rigidbody rigid;
+    /// <summary>
+    /// Boolean if axe is in hand.
+    /// </summary>
 	private bool inHand;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		inHand = true;
@@ -15,6 +32,9 @@ public class ThrowAxe : MonoBehaviour
 		rigid.isKinematic = true;
 	}
 
+    /// <summary>
+    /// Throws the axe.
+    /// </summary>
 	public void throwAxe()
 	{
 		if (!inHand)
@@ -28,6 +48,9 @@ public class ThrowAxe : MonoBehaviour
 		rigid.AddForce (dir  * throwPower, ForceMode.Impulse);
 	}
 
+    /// <summary>
+    /// Resets the axe to be in the hand.
+    /// </summary>
 	public void axeInHand()
 	{
 		inHand = true;

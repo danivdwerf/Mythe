@@ -4,23 +4,43 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(LoadUIHandler))]
+/// <summary>
+/// Load scene.
+/// </summary>
 public class LoadScene : MonoBehaviour 
 {
-    private float percentage{get;set;}
+    /// <summary>
+    /// The percentage.
+    /// </summary>
+    private float percentage;
     public float Percentage{get;}
-    private LoadUIHandler uiHandler{get;set;}
+    /// <summary>
+    /// Reference to LoadUIHandler class.
+    /// </summary>
+    private LoadUIHandler uiHandler;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
     private void Start()
     {
         percentage = 0;
         uiHandler = this.GetComponent<LoadUIHandler>();
     }
 
+    /// <summary>
+    /// Loads the scene.
+    /// </summary>
+    /// <param name="sceneIndex">Scene index.</param>
     public void loadScene(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
     }
 
+    /// <summary>
+    /// Load the specified sceneIndex.
+    /// </summary>
+    /// <param name="sceneIndex">Scene index.</param>
     private IEnumerator load(int sceneIndex)
     {
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneIndex);

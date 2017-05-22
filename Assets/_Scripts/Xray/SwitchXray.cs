@@ -1,12 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Switch xray.
+/// </summary>
 public class SwitchXray : MonoBehaviour 
 {
-	[SerializeField]private Camera mainCamera;
+    /// <summary>
+    /// Boolean if the vision is activated.
+    /// </summary>
 	private bool _specVision;
+    /// <summary>
+    /// The objects that should be oulined.
+    /// </summary>
 	private OutlineObject[] objects;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start () 
 	{
 		objects = FindObjectsOfType<OutlineObject> ();
@@ -14,12 +25,18 @@ public class SwitchXray : MonoBehaviour
 		normVision ();
 	}
 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update () 
 	{
 		if (Input.GetButtonDown (Controller.L1))
 			switchVision ();
 	}
 
+    /// <summary>
+    /// Switchs the vision.
+    /// </summary>
 	public void switchVision()
 	{
 		if (_specVision)
@@ -28,20 +45,26 @@ public class SwitchXray : MonoBehaviour
 			specVision ();
 	}
 
+    /// <summary>
+    /// Norms the vision.
+    /// </summary>
 	private void normVision()
 	{
 		_specVision = false;
-		mainCamera.cullingMask &=  ~(1 << LayerMask.NameToLayer("DisText"));
+        Camera.main.cullingMask &=  ~(1 << LayerMask.NameToLayer("DisText"));
 		for (var i = 0; i < objects.Length; i++) 
 		{
 			objects [i].normalMat ();
 		}
 	}
 
+    /// <summary>
+    /// Specs the vision.
+    /// </summary>
 	private void specVision()
 	{
 		_specVision = true;
-		mainCamera.cullingMask |= 1 << LayerMask.NameToLayer("DisText");
+        Camera.main.cullingMask |= 1 << LayerMask.NameToLayer("DisText");
 		for (var i = 0; i < objects.Length; i++) 
 		{
 			objects [i].visionMat ();

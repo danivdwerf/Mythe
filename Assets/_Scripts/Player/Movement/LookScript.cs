@@ -1,16 +1,34 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Look script.
+/// </summary>
 public class LookScript : MonoBehaviour 
 {
+    /// <summary>
+    /// The player.
+    /// </summary>
 	private GameObject player;
+    /// <summary>
+    /// The look speed.
+    /// </summary>
 	[SerializeField]private float lookSpeed;
+    /// <summary>
+    /// The max rotation.
+    /// </summary>
 	[SerializeField]private float maxRotate;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		player = this.transform.parent.gameObject;
 	}
 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update()
 	{
 		var x = Input.GetAxisRaw (Controller.RightStickX);

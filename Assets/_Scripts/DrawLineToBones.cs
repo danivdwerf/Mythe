@@ -1,15 +1,34 @@
 ﻿using System.Collections.Generic;
-
 using UnityEngine;
-
+/// <summary>
+/// Draw line to bones.
+/// </summary>
 public class DrawLineToBones : MonoBehaviour 
 {
+    /// <summary>
+    /// The line material.
+    /// </summary>
 	[SerializeField]private Material lineMaterial;
+    /// <summary>
+    /// The width of the line.
+    /// </summary>
 	[SerializeField]private float lineWidth;
+    /// <summary>
+    /// The line offset y.
+    /// </summary>
 	[SerializeField]private float lineOffsetY;
+    /// <summary>
+    /// The line renderers.
+    /// </summary>
 	private List<LineRenderer> lineRenderers;
+    /// <summary>
+    /// Reference to ObjectPooler.
+    /// </summary>
 	private ObjectPooler bonePool;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		bonePool = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ObjectPooler>();
@@ -20,11 +39,19 @@ public class DrawLineToBones : MonoBehaviour
 		}
 	}
 
+    /// <summary>
+    /// Adds renderer to list.
+    /// </summary>
+    /// <param name="bone">Bone.</param>
 	public void addToList(GameObject bone)
 	{
 		addlineRenderer (bone);
 	}
 
+    /// <summary>
+    /// Adds linerenderer to bone and puts is in the list.
+    /// </summary>
+    /// <param name="bone">Bone.</param>
 	private void addlineRenderer(GameObject bone)
 	{
 		var line = bone.AddComponent<LineRenderer> ();
@@ -37,6 +64,9 @@ public class DrawLineToBones : MonoBehaviour
 		lineRenderers.Add (line);
 	}
 
+    /// <summary>
+    /// Draws the lines.
+    /// </summary>
 	public void drawLines()
 	{
 		for (var i = 0; i < bonePool.PoolSize; i++)

@@ -1,12 +1,27 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Dark area.
+/// </summary>
 public class DarkArea : MonoBehaviour 
 {
+    /// <summary>
+    /// The player.
+    /// </summary>
 	private GameObject player;
+    /// <summary>
+    /// The sprite.
+    /// </summary>
 	private SpriteRenderer sprite;
+    /// <summary>
+    /// Boolean if player is in area.
+    /// </summary>
 	private bool inArea;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -15,6 +30,10 @@ public class DarkArea : MonoBehaviour
 		inArea = false;
 	}
 
+    /// <summary>
+    /// Raises the trigger enter event.
+    /// </summary>
+    /// <param name="other">Other.</param>
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject != player)
@@ -23,6 +42,10 @@ public class DarkArea : MonoBehaviour
 		StartCoroutine ("darkenScreen");
 	}
 
+    /// <summary>
+    /// Raises the trigger exit event.
+    /// </summary>
+    /// <param name="other">Other.</param>
 	private void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject != player)
@@ -33,6 +56,10 @@ public class DarkArea : MonoBehaviour
 		sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, 0);
 	}
 
+    /// <summary>
+    /// Darkens the screen.
+    /// </summary>
+    /// <returns>The screen.</returns>
 	private IEnumerator darkenScreen()
 	{
 		while (inArea) 

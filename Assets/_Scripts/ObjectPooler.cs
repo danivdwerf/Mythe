@@ -1,17 +1,37 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Object pooler.
+/// </summary>
 public class ObjectPooler : MonoBehaviour
 {
+    /// <summary>
+    /// The object to pool.
+    /// </summary>
 	[SerializeField]private GameObject objectToPool;
+    /// <summary>
+    /// The size of the pool.
+    /// </summary>
 	[SerializeField]private int poolSize;
 	public int PoolSize{get{return poolSize;}}
-
+    /// <summary>
+    /// The pooled objects.
+    /// </summary>
 	private List<GameObject> pooledObjects;
 	public List<GameObject> Pool{get{return pooledObjects;}}
+    /// <summary>
+    /// Boolean if pool should expand.
+    /// </summary>
 	[SerializeField]private bool shouldExpand;
+    /// <summary>
+    /// Reference to DrawLineToBones class.
+    /// </summary>
 	private DrawLineToBones drawer;
 
+    /// <summary>
+    /// Awake this instance.
+    /// </summary>
     private void Awake()
     {
 		drawer = this.GetComponent<DrawLineToBones> ();
@@ -28,6 +48,10 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets the object.
+    /// </summary>
+    /// <returns>The object.</returns>
     public GameObject getObject()
     {
         for (int i = 0; i < pooledObjects.Count; i++)

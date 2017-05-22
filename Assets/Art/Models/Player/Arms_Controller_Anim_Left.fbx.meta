@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 5ec1be8b0c51a334d9da349404b1ace8
+timeCreated: 1492069741
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arms_Reference:Index_End1
+    100004: Arms_Reference:joint16
+    100006: Arms_Reference:joint17
+    100008: Arms_Reference:joint18
+    100010: Arms_Reference:joint19
+    100012: Arms_Reference:joint20
+    100014: Arms_Reference:joint21
+    100016: Arms_Reference:joint22
+    100018: Arms_Reference:joint23
+    100020: Arms_Reference:joint24
+    100022: Arms_Reference:L_ARM_Mesh
+    100024: Arms_Reference:L_shouder2
+    100026: Arms_Reference:locator20
+    100028: Arms_Reference:Middel_End1
+    100030: Arms_Reference:Pink_End1
+    100032: Arms_Reference:R_Duim04
+    100034: Arms_Reference:R_Duim05
+    100036: Arms_Reference:R_elbow1
+    100038: Arms_Reference:R_Index02
+    100040: Arms_Reference:R_Middel02
+    100042: Arms_Reference:R_Pink02
+    100044: Arms_Reference:R_pols1
+    100046: Arms_Reference:R_Ring02
+    100048: Arms_Reference:Ring_End1
+    400000: //RootNode
+    400002: Arms_Reference:Index_End1
+    400004: Arms_Reference:joint16
+    400006: Arms_Reference:joint17
+    400008: Arms_Reference:joint18
+    400010: Arms_Reference:joint19
+    400012: Arms_Reference:joint20
+    400014: Arms_Reference:joint21
+    400016: Arms_Reference:joint22
+    400018: Arms_Reference:joint23
+    400020: Arms_Reference:joint24
+    400022: Arms_Reference:L_ARM_Mesh
+    400024: Arms_Reference:L_shouder2
+    400026: Arms_Reference:locator20
+    400028: Arms_Reference:Middel_End1
+    400030: Arms_Reference:Pink_End1
+    400032: Arms_Reference:R_Duim04
+    400034: Arms_Reference:R_Duim05
+    400036: Arms_Reference:R_elbow1
+    400038: Arms_Reference:R_Index02
+    400040: Arms_Reference:R_Middel02
+    400042: Arms_Reference:R_Pink02
+    400044: Arms_Reference:R_pols1
+    400046: Arms_Reference:R_Ring02
+    400048: Arms_Reference:Ring_End1
+    4300000: Arms_Reference:L_ARM_Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Arms_Reference:L_ARM_Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

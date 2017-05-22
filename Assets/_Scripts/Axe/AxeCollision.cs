@@ -1,19 +1,34 @@
 ﻿using UnityEngine;
-
+/// <summary>
+/// Axe collision.
+/// </summary>
 public class AxeCollision : MonoBehaviour 
 {
+    /// <summary>
+    /// The particlesystems.
+    /// </summary>
 	[SerializeField]private ParticleSystem[] ps;
+
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>(), this.GetComponent<Collider>());
 	}
+
+    /// <summary>
+    /// Raises the collision enter event.
+    /// </summary>
+    /// <param name="other">Other.</param>
 	private void OnCollisionEnter(Collision other)
 	{
+        
 		var index = 0;
-		if (ps [0].isPlaying)
+        if (ps [index].isPlaying)
 			index = 1;
 
-		if (ps [1].isPlaying)
+        if (ps [index].isPlaying)
 			index = 0;
 
 		ps[index].transform.position = this.transform.position;

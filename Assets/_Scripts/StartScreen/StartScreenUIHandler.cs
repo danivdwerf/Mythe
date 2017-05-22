@@ -1,13 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Start screen user interface handler.
+/// </summary>
 public class StartScreenUIHandler : MonoBehaviour 
 {
+    /// <summary>
+    /// The buttons.
+    /// </summary>
     [SerializeField]private Button[] buttons;
+    /// <summary>
+    /// Reference to LoadScene class.
+    /// </summary>
     private LoadScene loadScene;
+    /// <summary>
+    /// Boolean if the stick is being hold.
+    /// </summary>
     private bool hold;
+    /// <summary>
+    /// The current button index.
+    /// </summary>
     private int index;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
     private void Start()
     {
         loadScene = this.GetComponent<LoadScene>();
@@ -16,6 +34,9 @@ public class StartScreenUIHandler : MonoBehaviour
         selectButton();
     }
 
+    /// <summary>
+    /// Interact with a button.
+    /// </summary>
     private void interact()
     {
         if(index == 0)
@@ -25,6 +46,9 @@ public class StartScreenUIHandler : MonoBehaviour
             CloseGame.Quit();
     }
 
+    /// <summary>
+    /// Selects the button.
+    /// </summary>
     private void selectButton()
     {
         if (index > buttons.Length - 1)
@@ -36,6 +60,9 @@ public class StartScreenUIHandler : MonoBehaviour
         buttons[index].Select();
     }
         
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
     private void Update()
     {
         var xAxis = Input.GetAxisRaw (Controller.RightStickX);

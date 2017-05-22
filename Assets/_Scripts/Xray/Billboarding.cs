@@ -1,18 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class Billboarding : MonoBehaviour {
+/// <summary>
+/// Billboarding.
+/// </summary>
+public class Billboarding : MonoBehaviour
+{
+    /// <summary>
+    /// The main cam.
+    /// </summary>
 	[SerializeField]private Camera mainCam;
+    /// <summary>
+    /// The target.
+    /// </summary>
 	private GameObject target;
-	//private Vector3 targetPosX;
-	void Awake()
+
+    /// <summary>
+    /// Awake this instance.
+    /// </summary>
+	private void Awake()
 	{
 		target = transform.parent.gameObject;
 	}
 
-	void Update () 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
+	private void Update ()
 	{
-		
+
 
 		transform.LookAt(transform.position + mainCam.transform.rotation * Vector3.forward,
 			mainCam.transform.rotation * Vector3.up);

@@ -1,21 +1,40 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class EnemyHealth : Person
+/// <summary>
+/// Enemy health.
+/// </summary>
+public class EnemyHealth : Health
 {
+    /// <summary>
+    /// Reference to the animator component.
+    /// </summary>
 	private Animator anim;
+    /// <summary>
+    /// Reference to the death clip.
+    /// </summary>
 	[SerializeField]private AnimationClip death;
+
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	protected override void Start ()
 	{
 		base.Start ();
 		anim = this.GetComponent<Animator> ();
 	}
 
+    /// <summary>
+    /// Called when enemy dies.
+    /// </summary>
 	protected override void onDeath ()
 	{
 		StartCoroutine ("die");
 	}
 
+    /// <summary>
+    /// Logic of the enemy dying.
+    /// </summary>
 	private IEnumerator die()
 	{
 		anim.SetBool ("dead", true);

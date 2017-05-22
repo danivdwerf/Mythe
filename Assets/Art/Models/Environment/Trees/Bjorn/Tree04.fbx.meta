@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a73dbb3cf65115b4d832760c00180ffa
-timeCreated: 1492501109
+guid: ef9deeb7b646bc1498fdd3c35d29aa6e
+timeCreated: 1494508369
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Tree4
+    4300000: Tree05
+    4300002: Tree4
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -37,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.2
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -51,7 +52,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

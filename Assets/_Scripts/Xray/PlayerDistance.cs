@@ -1,43 +1,77 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerDistance : MonoBehaviour {
-
+/// <summary>
+/// Player distance.
+/// </summary>
+public class PlayerDistance : MonoBehaviour
+{
+    /// <summary>
+    /// The distance.
+    /// </summary>
 	private float distance;
+    /// <summary>
+    /// The target.
+    /// </summary>
 	[SerializeField]private Transform target;
+    /// <summary>
+    /// The dis text.
+    /// </summary>
 	[SerializeField]private TextMesh disText;
+    /// <summary>
+    /// The timer.
+    /// </summary>
 	private float timer;
+    /// <summary>
+    /// The timer value.
+    /// </summary>
 	private float timerValue;
 
-	void Start()
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
+	private void Start()
 	{
 		timerValue = 3;
 		checkDistance ();
 		returnTimer();
 	}
 
-	void FixedUpdate()
+    /// <summary>
+    /// Updates according to the framerate.
+    /// </summary>
+	private void FixedUpdate()
 	{
 		timer -= Time.fixedDeltaTime;
-		if (timer < 0) {
+		if (timer < 0)
+        {
 			checkDistance ();
 			returnTimer();
 		}
 	}
-		
-	void checkDistance()
+
+    /// <summary>
+    /// Checks the distance.
+    /// </summary>
+	private void checkDistance()
 	{
-		
+
 		distance = Vector3.Distance (transform.position, target.position) / 2;
 		Mathf.Round(distance);
-		if (distance < 60) {
+		if (distance < 60)
+        {
 			disText.text = distance.ToString ("#.00") + "m";
-		} else {
+		}
+        else
+        {
 			disText.text = " ";
 		}
 	}
 
-	void returnTimer()
+    /// <summary>
+    /// Resets the timer.
+    /// </summary>
+	private void returnTimer()
 	{
 		timer = timerValue;
 	}
