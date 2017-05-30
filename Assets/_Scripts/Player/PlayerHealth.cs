@@ -21,7 +21,7 @@ public class PlayerHealth : Health
 	{
 		base.Start ();
         ui = this.GetComponent<HealthUI>();
-        endRoom = GameObject.FindGameObjectWithTag("GameController").GetComponent<EndRoom>();
+        endRoom = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<EndRoom>();
 	}
 
     public void addHealth(float amount)

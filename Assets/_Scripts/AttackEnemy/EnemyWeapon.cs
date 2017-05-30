@@ -19,7 +19,7 @@ public class EnemyWeapon : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<PlayerHealth>();
     }
 
     /// <summary>

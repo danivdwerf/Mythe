@@ -8,13 +8,15 @@ public class AxeCollision : MonoBehaviour
     /// The particlesystems.
     /// </summary>
 	[SerializeField]private ParticleSystem[] ps;
+    private AudioManager audioManager;
 
     /// <summary>
     /// Start this instance.
     /// </summary>
 	private void Start()
 	{
-		Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>(), this.GetComponent<Collider>());
+        Physics.IgnoreCollision(GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Collider>(), this.GetComponent<Collider>());
+        audioManager = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<AudioManager>();
 	}
 
     /// <summary>
@@ -34,5 +36,6 @@ public class AxeCollision : MonoBehaviour
 		ps[index].transform.position = this.transform.position;
 		ps[index].transform.LookAt (Camera.main.transform);
 		ps[index].Play ();
+        audioManager.playSound("AxeHitTree");
 	}
 }

@@ -18,7 +18,7 @@ public class EndRoom : MonoBehaviour
         scoreTimer = this.GetComponent<ScoreTimer>();
         visualScore = this.GetComponent<ShowScore>();
 
-        position = new Vector3(-3f, 1f, -21.5f);
+        position = new Vector3(256.8f, -23, 210.9f);
         rotation = new Vector3(0, 90, 0);
         darkView.color = new Color (0, 0, 0, 0);
         darkView.sprite = null;

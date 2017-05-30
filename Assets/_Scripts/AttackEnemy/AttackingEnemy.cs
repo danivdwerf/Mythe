@@ -43,7 +43,7 @@ public class AttackingEnemy : MonoBehaviour
 	{
 		anim = this.GetComponent<Animator> ();
 		health = this.GetComponent<EnemyHealth> ();
-        pooler = GameObject.FindGameObjectWithTag("GameController").GetComponent<ObjectPooler>();
+        pooler = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<ObjectPooler>();
 	}
 
     /// <summary>

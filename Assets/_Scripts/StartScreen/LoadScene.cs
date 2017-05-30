@@ -10,11 +10,6 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour 
 {
     /// <summary>
-    /// The percentage.
-    /// </summary>
-    private float percentage;
-    public float Percentage{get;}
-    /// <summary>
     /// Reference to LoadUIHandler class.
     /// </summary>
     private LoadUIHandler uiHandler;
@@ -24,7 +19,6 @@ public class LoadScene : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        percentage = 0;
         uiHandler = this.GetComponent<LoadUIHandler>();
     }
 
@@ -44,12 +38,10 @@ public class LoadScene : MonoBehaviour
     private IEnumerator load(int sceneIndex)
     {
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneIndex);
-        uiHandler.startLoading();
-
         while (!loading.isDone)
         {
-            percentage = Mathf.Floor((loading.progress * 100) / 0.9f);
-            uiHandler.updateUI();
+            //var percentage = Mathf.Floor((loading.progress * 100) / 0.9f);
+            uiHandler.updateUI(loading.progress);
             yield return null;
         }
     }

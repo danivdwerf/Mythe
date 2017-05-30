@@ -15,12 +15,15 @@ public class SwitchXray : MonoBehaviour
     /// </summary>
 	private OutlineObject[] objects;
 
+    private AudioManager audioManager;
+
     /// <summary>
     /// Start this instance.
     /// </summary>
 	private void Start () 
 	{
 		objects = FindObjectsOfType<OutlineObject> ();
+        audioManager = this.GetComponent<AudioManager>();
 		_specVision = false;
 		normVision ();
 	}
@@ -50,6 +53,7 @@ public class SwitchXray : MonoBehaviour
     /// </summary>
 	private void normVision()
 	{
+        audioManager.playSound("XrayOff");
 		_specVision = false;
         Camera.main.cullingMask &=  ~(1 << LayerMask.NameToLayer("DisText"));
 		for (var i = 0; i < objects.Length; i++) 
@@ -63,6 +67,7 @@ public class SwitchXray : MonoBehaviour
     /// </summary>
 	private void specVision()
 	{
+        audioManager.playSound("XrayOn");
 		_specVision = true;
         Camera.main.cullingMask |= 1 << LayerMask.NameToLayer("DisText");
 		for (var i = 0; i < objects.Length; i++) 

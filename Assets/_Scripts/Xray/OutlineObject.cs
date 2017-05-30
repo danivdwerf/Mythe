@@ -29,7 +29,7 @@ public class OutlineObject : MonoBehaviour
 	{
 		renderer = GetComponent<Renderer> ();
 		originalShader = this.renderer.material.shader;
-		materialSwitch = GameObject.FindGameObjectWithTag ("GameController").GetComponent<SwitchMaterial> ();
+        materialSwitch = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<SwitchMaterial> ();
 	}
 
     /// <summary>

@@ -24,7 +24,7 @@ public class DarkArea : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player");
+        player = GameObject.FindGameObjectWithTag (Tags.player);
 		sprite = player.GetComponentInChildren<SpriteRenderer> ();
 		sprite.color = new Color (sprite.color.r, sprite.color.g, sprite.color.b, 0);
 		inArea = false;

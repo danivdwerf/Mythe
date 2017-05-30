@@ -31,8 +31,8 @@ public class SpawnBone : MonoBehaviour
 	private void Start()
 	{
 		player = this.gameObject;
-		bones = GameObject.FindGameObjectWithTag ("GameController").GetComponent<DrawLineToBones>();
-		bonePool = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ObjectPooler>();
+        bones = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<DrawLineToBones>();
+        bonePool = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<ObjectPooler>();
 	}
 
     /// <summary>

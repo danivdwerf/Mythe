@@ -22,7 +22,7 @@ public class BonePickup : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag(Tags.player).transform;
 		bone = FindObjectOfType<SpawnBone>();
         draw = FindObjectOfType<DrawLineToBones>();
 	}

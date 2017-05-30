@@ -24,7 +24,7 @@ public class EnemyCollision : MonoBehaviour
     /// <param name="other">Other.</param>
 	private void OnCollisionEnter(Collision other)
 	{
-        if (other.gameObject.tag != "Axe")
+        if (other.gameObject.tag != Tags.axe)
             return;
 
         if (other.rigidbody.velocity.sqrMagnitude >= 20)

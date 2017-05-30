@@ -1,60 +1,71 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 /// <summary>
-/// Audio manager.
+/// Audiomanager.
 /// </summary>
 public class AudioManager : MonoBehaviour 
 {
     /// <summary>
-    /// The audio files.
+    /// The audio instances.
     /// </summary>
-	[SerializeField]private Audio[] audioFiles;
+    [SerializeField]private Audio[] audioClips;
 
     /// <summary>
     /// Awake this instance.
     /// </summary>
-	private void Awake()
-	{
-		for (var i = 0; i < audioFiles.Length; i++)
-		{
-			GameObject go = new GameObject ("Audio: " + audioFiles[i].Name.ToString());
-			go.transform.SetParent (this.transform);
-			audioFiles [i].setSource (go.AddComponent<AudioSource>());
-		}
-	}
+    private void Awake()
+    {
+        for (var i = 0; i < audioClips.Length; i++)
+        {
+            GameObject go = new GameObject ("Audio: " + audioClips[i].Name.ToString());
+            go.transform.SetParent (this.transform);
+            audioClips [i].setSource (go.AddComponent<AudioSource>());
+        }
+    }
 
     /// <summary>
-    /// Plays the sound by name.
+    /// Play a sound.
     /// </summary>
     /// <param name="name">Name.</param>
-	public void playSound(string name)
-	{
-		audioLoop (name).play ();
-	}
+    public void playSound(string name)
+    {
+        audioLoop (name).play ();
+    }
 
     /// <summary>
-    /// Stops the sound by name.
+    /// Stop a sound.
     /// </summary>
     /// <param name="name">Name.</param>
-	public void stopSound(string name)
-	{
-		audioLoop (name).stop ();	
-	}
+    public void stopSound(string name)
+    {
+        audioLoop (name).stop ();   
+    }
 
     /// <summary>
-    /// Loops through audio files and return the file with the given name.
+    /// Check if a clip is playing
+    /// </summary>
+    /// <returns><c>true</c>, if clip is playing, <c>false</c> otherwise.</returns>
+    /// <param name="name">Name.</param>
+    public bool isPlaying(string name)
+    {
+        return audioLoop (name).Source.isPlaying;
+    }
+
+    /// <summary>
+    /// Loops through all audio clips and returns the desired clip
     /// </summary>
     /// <returns>The loop.</returns>
     /// <param name="name">Name.</param>
-	private Audio audioLoop(string name)
-	{
-		for (var i = 0; i < audioFiles.Length; i++)
-		{
-			if (audioFiles [i].Name == name)
-			{
-				return audioFiles[i];
-			}
-		}
+    private Audio audioLoop(string name)
+    {
+        for (var i = 0; i < audioClips.Length; i++)
+        {
+            if (audioClips [i].Name == name)
+            {
+                return audioClips[i];
+            }
+        }
         return null;
-	}
+    }
 }

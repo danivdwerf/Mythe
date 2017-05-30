@@ -31,7 +31,7 @@ public class DrawLineToBones : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
-		bonePool = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ObjectPooler>();
+        bonePool = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<ObjectPooler>();
 		lineRenderers = new List<LineRenderer> ();
 		for (int i = 0; i < bonePool.PoolSize; i++)
 		{

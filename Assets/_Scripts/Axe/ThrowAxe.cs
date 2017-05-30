@@ -21,13 +21,16 @@ public class ThrowAxe : MonoBehaviour
     /// </summary>
 	private bool inHand;
 
+    private AudioManager audioManager;
+
     /// <summary>
     /// Start this instance.
     /// </summary>
 	private void Start()
 	{
-		inHand = true;
 		rigid = axe.GetComponent<Rigidbody> ();
+        audioManager = this.GetComponent<AudioManager>();
+        inHand = true;
 		rigid.useGravity = false;
 		rigid.isKinematic = true;
 	}
@@ -46,6 +49,7 @@ public class ThrowAxe : MonoBehaviour
 		rigid.isKinematic = false;
 		var dir = Camera.main.transform.forward + new Vector3 (0, 0.3f, 0);
 		rigid.AddForce (dir  * throwPower, ForceMode.Impulse);
+        audioManager.playSound("AxeThrow");
 	}
 
     /// <summary>

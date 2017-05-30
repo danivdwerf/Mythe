@@ -22,7 +22,7 @@ public class PickupAxe : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
-		axe = GameObject.FindGameObjectWithTag ("Axe").transform;
+        axe = GameObject.FindGameObjectWithTag (Tags.axe).transform;
 		if (axe == null)
 			throw new System.Exception ("PickupAxe: Failed to find the axe");
 	}

@@ -10,6 +10,7 @@ public class EnemyHealth : Health
     /// Reference to the animator component.
     /// </summary>
 	private Animator anim;
+    static readonly int _dead = Animator.StringToHash("dead");
     /// <summary>
     /// Reference to the death clip.
     /// </summary>
@@ -37,7 +38,7 @@ public class EnemyHealth : Health
     /// </summary>
 	private IEnumerator die()
 	{
-		anim.SetBool ("dead", true);
+        anim.SetBool (_dead, true);
 		yield return new WaitForSeconds (death.length+4);
 		this.gameObject.SetActive (false);
         this.gameObject.SetActive (true);
