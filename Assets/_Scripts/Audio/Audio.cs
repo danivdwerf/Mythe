@@ -71,18 +71,18 @@ public class Audio
             this.source.rolloffMode = AudioRolloffMode.Linear;
             this.source.transform.position = soundPosition.position;
         }
-
+            
         if (this.playFromStart)
-            this.source.Play();
+            play();
 	}
 
     /// <summary>
     /// Play this audioclip.
     /// </summary>
 	public void play()
-	{
-		if(!this.source.isPlaying)
-			this.source.Play ();
+    {
+        if (!this.source.isPlaying)
+            this.source.Play();
 	}
 
     /// <summary>

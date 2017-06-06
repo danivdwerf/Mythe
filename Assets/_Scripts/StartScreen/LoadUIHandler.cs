@@ -9,6 +9,7 @@ public class LoadUIHandler : MonoBehaviour
     /// The loading text.
     /// </summary>
     [SerializeField]private Text loadingText;
+    [SerializeField]private Image loadbar;
     /// <summary>
     /// Reference to LoadScene;
     /// </summary>
@@ -20,6 +21,8 @@ public class LoadUIHandler : MonoBehaviour
     private void Start()
     {
         loadScene = this.GetComponent<LoadScene>();
+        loadbar.fillAmount = 0;
+        loadingText.text = "Loading: 0%";
     }
 
     /// <summary>
@@ -28,6 +31,7 @@ public class LoadUIHandler : MonoBehaviour
     public void updateUI(float percentage)
     {
         var edited = Mathf.Floor((percentage * 100) / 0.9f);
+        loadbar.fillAmount = percentage / 0.9f;
         loadingText.text = "Loading: " + edited + "%";
     }
 }

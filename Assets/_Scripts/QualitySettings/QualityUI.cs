@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class QualityUI : MonoBehaviour 
 {
@@ -26,7 +27,6 @@ public class QualityUI : MonoBehaviour
     {
         logic = this.GetComponent<QualityLogic>();
         panelHandler = this.GetComponent<StartScreenPanelHandler>();
-
         setListeners();
         updateValues();
     }

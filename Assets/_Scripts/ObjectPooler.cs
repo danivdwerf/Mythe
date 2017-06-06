@@ -56,6 +56,9 @@ public class ObjectPooler : MonoBehaviour
     {
         for (int i = 0; i < pooledObjects.Count; i++)
         {
+            if (pooledObjects[i] == null)
+                continue;
+            
             if (!pooledObjects[i].activeInHierarchy)
                 return pooledObjects[i];
         }

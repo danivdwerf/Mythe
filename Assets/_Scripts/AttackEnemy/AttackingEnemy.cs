@@ -116,7 +116,7 @@ public class AttackingEnemy : MonoBehaviour
         bone.transform.position = this.transform.position;
         bone.SetActive(true);
 
-		this.transform.position = new Vector3 (95, 10, 56);
+		this.transform.position = new Vector3 (256.5f, 13.91f, 144.8f);
 		health.reset ();
 	}
 }

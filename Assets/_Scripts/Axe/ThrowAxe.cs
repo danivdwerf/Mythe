@@ -12,6 +12,9 @@ public class ThrowAxe : MonoBehaviour
     /// The axe.
     /// </summary>
 	[SerializeField]private GameObject axe;
+    [SerializeField]private GameObject hand;
+    private Animator anim;
+    static readonly int _inHand = Animator.StringToHash("inHand");
     /// <summary>
     /// Reference to the Rigidbody.
     /// </summary>
@@ -28,11 +31,13 @@ public class ThrowAxe : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
+        anim = hand.GetComponent<Animator>();
 		rigid = axe.GetComponent<Rigidbody> ();
         audioManager = this.GetComponent<AudioManager>();
         inHand = true;
 		rigid.useGravity = false;
 		rigid.isKinematic = true;
+        anim.SetBool(_inHand, true);
 	}
 
     /// <summary>
@@ -42,7 +47,7 @@ public class ThrowAxe : MonoBehaviour
 	{
 		if (!inHand)
 			return;
-
+        
 		inHand = false;
 		axe.transform.SetParent (null);
 		rigid.useGravity = true;
@@ -50,6 +55,7 @@ public class ThrowAxe : MonoBehaviour
 		var dir = Camera.main.transform.forward + new Vector3 (0, 0.3f, 0);
 		rigid.AddForce (dir  * throwPower, ForceMode.Impulse);
         audioManager.playSound("AxeThrow");
+        anim.SetBool(_inHand, false);
 	}
 
     /// <summary>
@@ -61,5 +67,6 @@ public class ThrowAxe : MonoBehaviour
 		rigid.useGravity = false;
 		rigid.isKinematic = true;
 		rigid.velocity = Vector3.zero;
+        anim.SetBool(_inHand, true);
 	}
 }
