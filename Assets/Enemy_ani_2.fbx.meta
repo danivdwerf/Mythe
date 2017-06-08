@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 6c84dbb151d48400c86438f26e4324a1
+timeCreated: 1496923219
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: enemy_exorcist:Legs_hands_hoodie
+    100004: enemy_exorcist:Mask
+    100006: enemy_exorcist:Torso
+    100008: Enemy_model
+    100010: Houwdegen_0004:Blade
+    100012: Houwdegen_0004:Blade 1
+    100014: Houwdegen_0004:Sheath
+    100016: L_ankle
+    100018: L_ball
+    100020: L_Index_1
+    100022: L_Index_2
+    100024: L_Index_3
+    100026: L_Low_arm
+    100028: L_Low_leg
+    100030: L_Middle_1
+    100032: L_Middle_2
+    100034: L_Middle_3
+    100036: L_Pink_1
+    100038: L_Pink_2
+    100040: L_Pink_3
+    100042: L_Ring_1
+    100044: L_Ring_2
+    100046: L_Ring_3
+    100048: L_shoulder
+    100050: L_Thumb_1
+    100052: L_Thumb_2
+    100054: L_Thumb_3
+    100056: L_toe
+    100058: L_Up_arm
+    100060: L_Up_leg
+    100062: L_wrist
+    100064: Neck_1
+    100066: Neck_2
+    100068: Neck_3
+    100070: R_ankle
+    100072: R_ball
+    100074: R_Index_1
+    100076: R_Index_2
+    100078: R_Index_3
+    100080: R_Low_arm
+    100082: R_Low_leg
+    100084: R_Middle_1
+    100086: R_Middle_2
+    100088: R_Middle_3
+    100090: R_Pink_1
+    100092: R_Pink_2
+    100094: R_Pink_3
+    100096: R_Ring_1
+    100098: R_Ring_2
+    100100: R_Ring_3
+    100102: R_shoulder
+    100104: R_Thumb_1
+    100106: R_Thumb_2
+    100108: R_Thumb_3
+    100110: R_toe
+    100112: R_Up_arm
+    100114: R_up_leg
+    100116: R_wrist
+    100118: Root
+    100120: Spine_1
+    100122: Spine_2
+    100124: Spine_3
+    100126: Spine_4
+    100128: Spine_5
+    100130: Spine_6
+    100132: Spine_7
+    100134: Spine_fk_1
+    100136: Spine_fk_2
+    100138: Spine_fk_3
+    100140: Spine_fk_4
+    400000: //RootNode
+    400002: enemy_exorcist:Legs_hands_hoodie
+    400004: enemy_exorcist:Mask
+    400006: enemy_exorcist:Torso
+    400008: Enemy_model
+    400010: Houwdegen_0004:Blade
+    400012: Houwdegen_0004:Blade 1
+    400014: Houwdegen_0004:Sheath
+    400016: L_ankle
+    400018: L_ball
+    400020: L_Index_1
+    400022: L_Index_2
+    400024: L_Index_3
+    400026: L_Low_arm
+    400028: L_Low_leg
+    400030: L_Middle_1
+    400032: L_Middle_2
+    400034: L_Middle_3
+    400036: L_Pink_1
+    400038: L_Pink_2
+    400040: L_Pink_3
+    400042: L_Ring_1
+    400044: L_Ring_2
+    400046: L_Ring_3
+    400048: L_shoulder
+    400050: L_Thumb_1
+    400052: L_Thumb_2
+    400054: L_Thumb_3
+    400056: L_toe
+    400058: L_Up_arm
+    400060: L_Up_leg
+    400062: L_wrist
+    400064: Neck_1
+    400066: Neck_2
+    400068: Neck_3
+    400070: R_ankle
+    400072: R_ball
+    400074: R_Index_1
+    400076: R_Index_2
+    400078: R_Index_3
+    400080: R_Low_arm
+    400082: R_Low_leg
+    400084: R_Middle_1
+    400086: R_Middle_2
+    400088: R_Middle_3
+    400090: R_Pink_1
+    400092: R_Pink_2
+    400094: R_Pink_3
+    400096: R_Ring_1
+    400098: R_Ring_2
+    400100: R_Ring_3
+    400102: R_shoulder
+    400104: R_Thumb_1
+    400106: R_Thumb_2
+    400108: R_Thumb_3
+    400110: R_toe
+    400112: R_Up_arm
+    400114: R_up_leg
+    400116: R_wrist
+    400118: Root
+    400120: Spine_1
+    400122: Spine_2
+    400124: Spine_3
+    400126: Spine_4
+    400128: Spine_5
+    400130: Spine_6
+    400132: Spine_7
+    400134: Spine_fk_1
+    400136: Spine_fk_2
+    400138: Spine_fk_3
+    400140: Spine_fk_4
+    2300000: Houwdegen_0004:Blade 1
+    2300002: Houwdegen_0004:Sheath
+    3300000: Houwdegen_0004:Blade 1
+    3300002: Houwdegen_0004:Sheath
+    4300000: enemy_exorcist:Legs_hands_hoodie
+    4300002: enemy_exorcist:Mask
+    4300004: enemy_exorcist:Torso
+    4300006: Houwdegen_0004:Blade
+    4300008: Houwdegen_0004:Sheath
+    7400000: Run
+    7400002: Sword_attack
+    7400004: Kick
+    7400006: Idle > run
+    7400008: Death
+    9500000: //RootNode
+    13700000: enemy_exorcist:Legs_hands_hoodie
+    13700002: enemy_exorcist:Mask
+    13700004: enemy_exorcist:Torso
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

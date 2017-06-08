@@ -68,7 +68,8 @@ public class AttackingEnemy : MonoBehaviour
 	private void Update()
 	{
 		var dir = (this.transform.position - target.transform.position);
-		if (Mathf.Abs(dir.sqrMagnitude) <= 15f)
+        print(attacking);
+		if (Mathf.Abs(dir.sqrMagnitude) <= 8f)
 			attack ();
         else if(!attacking && !anim.GetBool(_dead))
 			follow (dir);
